@@ -3,7 +3,7 @@
 A clean, minimal task manager built with vanilla HTML, CSS, and JavaScript. No frameworks, no dependencies — just pure front-end skills.
 
 ## Live Demo
-> Add your GitHub Pages link here after deploying (step 5 below)
+>https://gunda-nikhitha.github.io/task-manager
 
 ---
 
