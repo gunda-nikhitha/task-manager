@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow — Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect width="28" height="28" rx="8" fill="#6C63FF"/>
+            <path d="M8 14.5l4 4 8-8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo-text">TaskFlow</span>
+        </div>
+        <p class="header-sub">Stay on top of what matters</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-chip" id="stat-total">0 tasks</div>
+        <div class="stat-chip done" id="stat-done">0 done</div>
+        <div class="stat-chip overdue" id="stat-overdue">0 overdue</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Add Task Form -->
+      <section class="add-section">
+        <h2 class="section-title">Add a task</h2>
+        <div class="form-grid">
+          <input type="text" id="task-input" class="input" placeholder="What needs to be done?" maxlength="120"/>
+          <input type="date" id="due-input" class="input date-input" />
+          <select id="priority-input" class="input select-input">
+            <option value="low">Low priority</option>
+            <option value="medium" selected>Medium priority</option>
+            <option value="high">High priority</option>
+          </select>
+          <button id="add-btn" class="btn-add">Add task</button>
+        </div>
+      </section>
+
+      <!-- Filters -->
+      <section class="filter-section">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="active">Active</button>
+          <button class="filter-tab" data-filter="completed">Completed</button>
+          <button class="filter-tab" data-filter="overdue">Overdue</button>
+        </div>
+        <button id="clear-completed" class="btn-ghost">Clear completed</button>
+      </section>
+
+      <!-- Task List -->
+      <section class="task-section">
+        <ul class="task-list" id="task-list"></ul>
+        <div class="empty-state" id="empty-state">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="20" stroke="#E0DEFF" stroke-width="2"/>
+            <path d="M16 24h16M24 16v16" stroke="#6C63FF" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p class="empty-title">No tasks here</p>
+          <p class="empty-sub">Add one above to get started</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
