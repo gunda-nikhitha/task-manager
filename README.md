@@ -54,17 +54,13 @@ task-manager/
 
 ---
 
-## Run Locally
+## Run the App
 
-No install needed. Just clone and open:
+No install needed. Open the live app directly in your browser:
 
-```bash
-git clone https://github.com/gunda-nikhitha/task-manager.git
-cd task-manager
-# open index.html in your browser
-```
+**Live Demo → https://gunda-nikhitha.github.io/task-manager **
 
-Or simply double-click `index.html` — it runs straight in the browser.
+Or download the repo as a ZIP, unzip it, and double-click `index.html`.
 
 ---
 
